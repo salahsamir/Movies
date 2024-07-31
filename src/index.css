@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #060606;
+}
+/* navbar */
+.navbar {
+    position: relative;
+  }
+  
+  .navbar::before, .navbar::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #3cefff;
+    transform-origin: center;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.4s ease;
+  }
+  
+  .navbar::before {
+    top: 0;
+  }
+  
+  .navbar::after {
+    bottom: 0;
+  }
+  
+  .navbar:hover::before, span:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+
+nav .active{
+  /* color:#fff; */
+  color: #3cefff;
+  transition: 0.3s;
+  
+}
+
+
+.trend {
+  position: relative;
+}
+
+.trend::before {
+  content: '';
+  position: absolute;
+  left: 0%;
+  width: 40%;
+  height: 2px;
+  background-color: #3cefff;
+  transform-origin: center;
+  /* transform: translateX(-50%) scaleX(0); */
+  transition: transform 0.4s ease;
+}
+
+.trend::after {
+  content: '';
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  background-color: #3cefff;
+  transform-origin: center;
+  /* transform: translateX(-50%) scaleX(0); */
+  transition: transform 0.4s ease;
+}
+.trend::before {
+  top: 0;
+}
+
+.trend::after {
+  bottom: 0;
+}
+
+/* .trend:hover::before, .trend:hover::after {
+  transform: translateX(-50%) scaleX(1);
+} */
+.rate{
+  color: #0d0d0d;
+  background:#3cefff;
+  border-radius: 5px;
+  padding: 2px 5px;
+
+}
